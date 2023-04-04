@@ -1,3 +1,3 @@
-# Yas Otuzbes
+# salTodo
 
-Same project but written in golang
+Simple todo project written in golang
