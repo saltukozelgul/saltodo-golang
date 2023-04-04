@@ -2,6 +2,7 @@ package main
 
 import (
 	"database/sql"
+	"fmt"
 	"net/http"
 	"yasotubez/models"
 
@@ -21,6 +22,7 @@ func main() {
 
 	// Database connection
 	dbURL := os.Getenv("DATABASE_URL")
+	fmt.Println(dbURL)
 	db, err := sql.Open("postgres", dbURL)
 	if err != nil {
 		panic(err)
