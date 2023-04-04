@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E2021 !important;
+}
+
+h1,h2,h3,h4 {
+    text-align: center;
+    margin-bottom: 20px;
+    color : #4CAF50;
+}
+
+.text-white {
+    color: white
+}
+
+
+.dark-bg {
+    padding: 10px 25px;
+    margin: 10px;
+    background-color: #181A1B;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}

@@ -28,6 +28,7 @@ label {
     display: block;
     margin-bottom: 10px;
     font-size: 18px;
+    color: white;
 }
 
 input[type="date"] {
@@ -38,6 +39,8 @@ input[type="date"] {
     box-sizing: border-box;
     font-size: 18px;
     margin-bottom: 20px;
+    border-color: rgb(62, 68, 70);
+    color: white;
 }
 
 input {
@@ -48,6 +51,9 @@ input {
     box-sizing: border-box;
     font-size: 18px;
     margin-bottom: 20px;
+    border-color: rgb(62, 68, 70);
+    background-color: #1E2021;
+    color: white;
 }
 
 button {
