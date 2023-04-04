@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E2021;
+}
+
+.container {
+    position: absolute;
+    top: 20%;
+    left: 1%;
+    right: 1%;
+    max-width: 600px;
+    margin: auto auto;
+    padding: 20px;
+    background-color: #181A1B;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color : #4CAF50;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input[type="date"] {
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 8px;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    float: right;
+}
+
+.plus-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 55px;
+    padding: 10px 10px;
+    margin-right: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    float: right;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
