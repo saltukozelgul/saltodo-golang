@@ -3,6 +3,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="static/result.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/852539a4c9.js" crossorigin="anonymous"></script>
         <title>salTodo</title>
     </head>
     <body>
@@ -10,19 +11,60 @@
                 <h1 style="width:50%" class="dark-bg">salTodo</h1>
 
             </center>    
-            <div class="row justify-content-center">
-                <div class="col-md-3 dark-bg">
-                    <h4 class="text-white">Routines</h4>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-3 dark-bg">
+                        <h4 class="text-white">Routines</h4>
+                    </div>
+                    <div class="col-md-3 dark-bg">
+                        <div style="justify-content: space-between;margin:5px;padding-bottom: 10px;" class="row">
+                                <h4 class="text-white">To Do</h4>
+                                <button onclick="window.location='/';" type="submit" class="btn btn-success">
+                                    <i class="fa-solid fa-plus"></i>   
+                                </button>
+                        </div>
+                        <!-- Create table -->
+                        {{ range .tasks}}
+                        <form method="POST" action="add-done">
+                            <input id="id" name="id" hidden value="{{.ID}}">
+                            <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{.Title}}</h5>
+                                  <p class="card-text">{{.Description}}</p>
+                                  <div style="align-items: flex-end;display: flex;flex-direction: column;" class="flex">
+                                      <button type="submit" class="btn btn-success">
+                                        <i class="fa-solid fa-check"></i>
+                                      </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{end}}
+                    </div>
+                    <div class="col-md-3 dark-bg align-items-end">
+                        <div style="justify-content: space-between;margin:5px;padding-bottom: 10px;" class="row">
+                            <h4 class="text-white">Done</h4>
+                        </div>
+                        {{ range .done}}
+                        <form method="POST" action="delete">
+                            <input id="id" name="id" hidden value="{{.ID}}">
+                            <div class="card">
+                                <div class="card-body">
+                                  <h5 class="card-title">{{.Title}}</h5>
+                                  <p class="card-text">{{.Description}}</p>
+                                  <div style="align-items: flex-end;display: flex;flex-direction: column;" class="flex">
+                                      <button type="submit" class="btn btn-danger">
+                                        <i class="fa-solid fa-trash"></i>
+                                      </button>
+                                  </div>
+                                </div>
+                            </div>
+                        </form>
+                        {{end}}
+                    </div>
                 </div>
-                <div class="col-md-3 dark-bg">
-                    <h4 class="text-white">To Do</h4>
-                </div>
-                <div class="col-md-3 dark-bg">
-                    <h4 class="text-white">Done</h4>
-                </div>
-            </div>
-        
 
+            </div>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>

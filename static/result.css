@@ -15,6 +15,12 @@ h1,h2,h3,h4 {
     color: white
 }
 
+.card {
+    background-color: #1E2021 !important;
+    color: white;
+    margin-bottom: 5px;   
+}
+
 
 .dark-bg {
     padding: 10px 25px;

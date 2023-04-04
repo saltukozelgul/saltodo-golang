@@ -5,11 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.4.slim.js" integrity="sha256-dWvV84T6BhzO4vG6gWhsWVKVoa4lVmLnpBOZh/CAHU4=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/852539a4c9.js" crossorigin="anonymous"></script>
     <script src="static/scripts.js"></script>
 <title>salTodo</title>
 </head>
     <body>
         <div class="container">
+            
             <h1>salTodo</h1>
             <form method="POST" action="/result">
                 <label for="title"> Title </label>
@@ -26,6 +28,14 @@
                     <button type="submit">Add</button>
                 </div>
             </form>
+            <div class="row">
+                <h3>
+                    <btn onclick="window.location='/result';" class="show-all">
+                        View all To-Do's
+                    </btn>
+                </h3>
+            </div>
         </div>
+
     </body>
 </html>
